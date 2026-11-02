@@ -184,10 +184,11 @@ async def predict_disease(file: UploadFile = File(...)):
         "predicted_disease": predicted_disease,
         "confidence_score": round(confidence, 4),
         "details": details
-        @app.get("/health")
+    }
+
+@app.get("/health")
 def health_check():
     return {"status": "ok"}
-    }
 
 if __name__ == "__main__":
     import uvicorn
